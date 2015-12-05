@@ -9,3 +9,19 @@
     add path - url for new page
     add defaults with _controller - this is the controller it goes to when someone hits the page (namespaced class and method)
     add requirements with _permission, which allows us to view the page. Don't need quotes, but it is safer to do so.
+5. Create the controller
+    Create directory src and subdirectory Controller
+    Create new PHP class called RoarController.php
+    Add namespace. Must start with Drupal, the directory (dino_roar) and then the directory this class lives in (Controller)
+    Add a class. Class name must match filename + php
+    With the namespace and correct classname, Drupal won't be able to find the class.
+    Full class name is Drupal\dino_roar\Controller\RoarController
+    Add controller function roar().
+    Return via Symfony's Response method. Will autocomplete the use statement. This is required when using a class. Will get page not found without it.
+
+
+
+
+
+Notes
+    Indentation, curly-braces uses PSR-4 coding standards, which is different to offical Drupal standards
