@@ -1,0 +1,6 @@
+
+
+1. Create directory for the module - dino_roar
+2. Create info.yml - dino_roar.info.yml
+3. Enable the modoule in extends
+4. Define the route - create dino_roar.routing.yml
