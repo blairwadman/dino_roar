@@ -4,3 +4,8 @@
 2. Create info.yml - dino_roar.info.yml
 3. Enable the modoule in extends
 4. Define the route - create dino_roar.routing.yml
+    start with internal name for route (name doesn't matter) - dino_says:
+    indent next line 2  spaces (be consistent)
+    add path - url for new page
+    add defaults with _controller - this is the controller it goes to when someone hits the page (namespaced class and method)
+    add requirements with _permission, which allows us to view the page. Don't need quotes, but it is safer to do so.
