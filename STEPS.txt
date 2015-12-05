@@ -18,13 +18,19 @@
     Full class name is Drupal\dino_roar\Controller\RoarController
     Add controller function roar().
     Return via Symfony's Response method. Will autocomplete the use statement. This is required when using a class. Will get page not found without it.
-    This shows a response by itself - unthemed. You could return a JSON reponse via an API. 
+    This shows a response by itself - unthemed. You could return a JSON reponse via an API.
 6. Install Drupal Console
     curl -LSs http://drupalconsole.com/installer | php
     mv console.phar /usr/local/bin/drupal
     drupal
     Show all Drupal Console commands: drupal list
     Clear routing cache: drupal router:rebuild
+7. Add routing wildcards
+    Path can take wildcards - {wildcard}
+    Example - path: /the/dino/says/{count}
+    Value for {count} in URL is passed to $count in Controller. Must have the same name.
+    After a changing to the route, rebuild the routing cache: drupal router:rebuild
+    Adding the wildcard will mean that you need to add something after /the/dino/says/ or you'll get a page not found.
 
 
 
