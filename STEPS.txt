@@ -58,6 +58,16 @@
     Create a directory called Jurassic
     Create a class called RoadGenerator
     Create a namespace for the directory it is in
+11. Register the service
+    Add RoarGenerator to the container
+    Drupal will instantiate the RoadGenentor for us
+    create dino_roar_services.yml
+    add service
+    drupal cache:rebuild
+12. extends ControllerBase
+    Allows us to get services out of the container
+    Example of dependency injection pattern
+
 
 
 
@@ -66,3 +76,5 @@ Notes
     Indentation, curly-braces uses PSR-4 coding standards, which is different to offical Drupal standards
     Service - object that does work for me
     Service Contrainer - Depedency Injection Container
+    Container doesn't instantiate a service until someone asks for it (doesn't use CPU or memory until needed)
+    Containers reuses objects
