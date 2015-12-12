@@ -31,10 +31,38 @@
     Value for {count} in URL is passed to $count in Controller. Must have the same name.
     After a changing to the route, rebuild the routing cache: drupal router:rebuild
     Adding the wildcard will mean that you need to add something after /the/dino/says/ or you'll get a page not found.
-
+8. Debugging
+    Copy example settings file
+        sudo cp sites/example.settings.local.php sites/default/settings.local.php
+        sudo chmod 755 sites/default/settings.local.php
+        sudo chmod 755 sites/default/settings.php
+        sudo chmod 755 sites/default
+    Uncomment the following from settings.php
+        # if (file_exists(__DIR__ . '/settings.local.php')) {
+        #   include __DIR__ . '/settings.local.php';
+        # }
+    Rebuild cache
+        drupal cache:rebuild
+9. Web profiler
+    Install Devel module
+        Enable Update Manager
+        Go to Update Manager Config -> List (admin/reports/updates)
+        Install new module or theme
+        Copy Link Address from tar.gz on Devel project page
+        Paste link
+        Click install
+        Click "Enable newly added modules"
+        When you land back on the module page, enable Webprofiler (devel will also enable)
+        Go to Webprofile config and enable Routing, Services and Events
+10. Move count out of Controller into its own Service class (that is independent of Drupal)
+    Create a directory called Jurassic
+    Create a class called RoadGenerator
+    Create a namespace for the directory it is in
 
 
 
 
 Notes
     Indentation, curly-braces uses PSR-4 coding standards, which is different to offical Drupal standards
+    Service - object that does work for me
+    Service Contrainer - Depedency Injection Container
